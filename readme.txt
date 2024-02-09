@@ -14,4 +14,4 @@
 3. npm run dev (running locally)
 
 
-NOTE : Make sure images folder must be in client src directory root project (for storing images locally in folder)
+NOTE : Make sure images folder must be in client folder directory root project (for storing images locally in folder)
