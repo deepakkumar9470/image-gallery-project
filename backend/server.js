@@ -7,11 +7,12 @@ const PORT = process.env.PORT || 8000
 const connDb = require('./db/db')
 
 //Middlewares
-var corsOptions = {
-  origin: '*',
-  optionsSuccessStatus: 200,
+const corsOption = {
+  credentials: true,
+  origin: ['https://image-gallery-project-alpha.vercel.app']
 }
-app.use(cors(corsOptions))
+
+app.use(cors(corsOption))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
