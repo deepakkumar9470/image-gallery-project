@@ -7,13 +7,16 @@ const PORT = process.env.PORT || 8000
 const connDb = require('./db/db')
 
 //Middlewares
-const corsOptions = {
-  origin: 'https://image-gallery-project-alpha.vercel.app',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
-  optionsSuccessStatus: 204,
-};
-app.use(cors(corsOptions))
+// const corsOptions = {
+//   origin: 'https://image-gallery-project-alpha.vercel.app',
+//   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//   credentials: true,
+//   optionsSuccessStatus: 204,
+// };
+app.use(cors({
+  origin : 'https://image-gallery-project-alpha.vercel.app',
+  methods: ['GET,PUT,POST,DELETE'],
+}))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
