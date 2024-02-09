@@ -19,7 +19,7 @@ const UploadFile = () => {
       const formData = new FormData();
       formData.append("myfile", file);
 
-      const result = await axios.post(`${url}/api/upload-image`, formData, {
+       await axios.post(`${url}/api/upload-image`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -28,7 +28,6 @@ const UploadFile = () => {
       setIsSubmitted(false);
     } catch (error) {
       console.log(error);
-      // setIsSubmitted(false)
     } finally {
       setIsSubmitted(false);
     }
