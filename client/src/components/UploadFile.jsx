@@ -19,7 +19,7 @@ const UploadFile = () => {
       const formData = new FormData();
       formData.append("myfile", file);
 
-       await axios.post(`${url}/api/upload-image`, formData, {
+       await axios.post(`https://image-gallery-backend-api.cyclic.app/api/upload-image`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
