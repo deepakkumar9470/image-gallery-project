@@ -10,7 +10,7 @@ const Home = () => {
   const getImage = async () => {
     setLoading(true);
     try {
-      const result = await axios.get(`${url}/get-image`);
+      const result = await axios.get(`${url}/api/get-image`);
       setAllImage(result.data.img);
       setLoading(false);
     } catch (error) {
@@ -25,7 +25,7 @@ const Home = () => {
 
   const handleDelete = async (id) => {
     try {
-      const res = await axios.delete(`${url}/delete/${id}`);
+      const res = await axios.delete(`${url}/api/delete/${id}`);
       getImage();
     } catch (error) {
       console.log(error);

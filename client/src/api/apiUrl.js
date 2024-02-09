@@ -1,16 +1,14 @@
 // Local host URL
 
-export const url = 'http://localhost:5000/api'
-
-export const imgUrl = 'http://localhost:5000'
+// export const url = 'http://localhost:5000/api'
 
 
 
-// Deployed URL  @https://image-gallery-backend-api-0bvy.onrender.com
 
-// export const url = 'https://image-gallery-backend-api-0bvy.onrender.com/api/v2'
+// Deployed URL  @ https://image-gallery-backend-api.cyclic.app/api
 
-// export const imgUrl = 'https://image-gallery-backend-api-0bvy.onrender.com'
+export const url = 'https://image-gallery-backend-api.cyclic.app'
+
 
 
 
