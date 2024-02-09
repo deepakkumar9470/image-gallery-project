@@ -2,12 +2,11 @@ const express = require("express");
 const router =  express.Router();
 const Images =  require("../models/imageDetails")
 const multer = require("multer");
-const fs = require("fs");
 
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, "../client/src/images/");
+      cb(null, "../client/public/images/");
     },
     filename: function (req, file, cb) {
       const uniqueSuffix = Date.now();

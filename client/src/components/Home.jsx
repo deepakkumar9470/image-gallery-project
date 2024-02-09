@@ -45,7 +45,7 @@ const Home = () => {
               <img
                 src={
                   data?.image
-                    ? require(`../images/${data.image}`)
+                    ? `/images/${data.image}`
                     : "https://images.pexels.com/photos/707344/pexels-photo-707344.jpeg?auto=compress&cs=tinysrgb&w=600"
                 }
                 className="w-full h-full rounded-md cursor-pointer object-cover hover:scale-105 transition-all duration-75"
