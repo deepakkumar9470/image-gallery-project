@@ -22,7 +22,6 @@ const UploadFile = () => {
       const result = await axios.post(`${url}/api/upload-image`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
-          "Access-Control-Allow-Origin": "*",
         },
       });
       navigate("/");
