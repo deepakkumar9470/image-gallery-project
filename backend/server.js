@@ -9,7 +9,7 @@ const connDb = require('./db/db')
 //Middlewares
 app.use(cors({
   origin : ['https://image-gallery-project-wine.vercel.app','http://localhost:5173',
-            'http://localhost:3000','https://soft-capybara-ea7e48.netlify.app/'],
+            'http://localhost:3000','https://soft-capybara-ea7e48.netlify.app'],
   methods: ['GET,PUT,POST,DELETE'],
 }))
 app.use(express.json())
