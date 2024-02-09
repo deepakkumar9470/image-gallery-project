@@ -10,7 +10,9 @@ const Home = () => {
   const getImage = async () => {
     setLoading(true);
     try {
-      const result = await axios.get(`${url}/api/get-image`);
+      const result = await axios.get(`${url}/api/get-image`,{
+        headers: {"Access-Control-Allow-Origin": "*"}
+      });
       setAllImage(result.data.img);
       setLoading(false);
     } catch (error) {
@@ -25,7 +27,9 @@ const Home = () => {
 
   const handleDelete = async (id) => {
     try {
-      const res = await axios.delete(`${url}/api/delete/${id}`);
+      const res = await axios.delete(`${url}/api/delete/${id}`,{
+        headers: {"Access-Control-Allow-Origin": "*"}
+      });
       getImage();
     } catch (error) {
       console.log(error);
